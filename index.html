@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>cadence — a typing test that shows your rhythm</title>
+<title>typer — a typing test that shows your rhythm</title>
 <meta name="description" content="A minimalist typing speed test. Type. See your words-per-minute, accuracy, and the rhythm fingerprint of your keystrokes.">
 <meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231F3AB8'/%3E%3Crect x='14' y='7' width='4' height='18' fill='%23F4EFE3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -402,7 +403,7 @@
 </head>
 <body>
 <header>
-  <div class="brand">cadence<span class="dot">.</span><span class="cursor"></span></div>
+  <div class="brand">typer<span class="dot">.</span><span class="cursor"></span></div>
   <div class="top-controls">
     <div class="duration" role="tablist" aria-label="Test duration">
       <button data-dur="15" role="tab">15s</button>
@@ -460,7 +461,7 @@
 </main>
 
 <footer>
-  cadence · a minimalist typing test · <a href="https://github.com/akshanshkmr/typer">source</a>
+  typer · a minimalist typing test · <a href="https://github.com/akshanshkmr/typer">source</a>
 </footer>
 
 <script>
@@ -468,8 +469,8 @@
   // Common English word list (top ~200 by frequency-ish, filtered for typeability)
   const WORDS = ("the be to of and a in that have i it for not on with he as you do at this but his by from they we say her she or an will my one all would there their what so up out if about who get which go me when make can like time no just him know take people into year your good some could them see other than then now look only come its over think also back after use two how our work first well way even new want because any these give day most us is are was were been being has had did does can could shall should may might must such very own same tell does even down where why way each need feel between while great through under here still both against last never keep small keep leave large next early few quite always different every found around always another told young public best around move too words house world life without place high hand still such once every through under against another world number without world life still much again both between own long same next best keep house together large open small great good young important early few public bad hand different every found always another told great through where why through even down back after come only over think also its").split(/\s+/);
 
-  const DUR_KEY = 'cadence.duration';
-  const THEME_KEY = 'cadence.theme';
+  const DUR_KEY = 'typer.duration';
+  const THEME_KEY = 'typer.theme';
 
   const $ = (id) => document.getElementById(id);
   const stage = $('stage');
@@ -819,7 +820,7 @@
     console.assert(state.idx === before + 1, 'idx should advance after keystroke');
     handleBackspace();
     console.assert(state.idx === before, 'idx should retreat after backspace');
-    console.log('cadence self-check: ok');
+    console.log('typer self-check: ok');
     reset(true);
   }
 })();
